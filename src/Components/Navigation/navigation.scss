@@ -1,0 +1,123 @@
+.menu-wrapper {
+    max-width: 1168px;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 8px;
+   
+}
+
+.logo-small {
+    align-self: center;
+}
+
+.menu {
+    
+    display: flex;
+    gap: 12px;
+    &__upper-wrapper{
+        display: flex;
+        justify-content: end;
+        margin-bottom: 8px;
+    } 
+    &__search {
+        box-sizing: border-box;
+        flex-basis: 325px;
+        margin-right: 32px;
+        font-weight: 400;
+        border-radius: 16px;
+        outline: none;
+        border: 0px;
+        background-color: #EFF0F6;
+        background-image: url('./Search.png');
+        background-repeat: no-repeat;
+        background-position: bottom 50% left 24px;
+        padding-left: 60px;
+        }
+    &__lower-wrapper {
+        display: flex;
+        gap: 2px;
+    
+    } 
+    &__registration-button {
+        background-color: #fff;
+        font-family:  Poppins, sans-serif;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-weight: 600;
+        height: 60px;
+        padding: 12px 30px;
+        font-style: normal;
+        flex-shrink: 0;
+        text-decoration: none;
+        border: 2px solid #DB4A51;
+        border-radius: 40px;
+        color: black;
+        transition: all 300ms linear;
+        &:hover {
+            background-color: #FDA128;
+            border-color: #FDA128;
+        }
+        &.active {
+            background-color: #FDA128;
+            border-color: #FDA128;
+        }
+    }
+    &__change-language {
+        display: flex;
+        padding: 0px;
+        align-items: center;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        &:last-child::before {
+            content: '';
+            margin-left: 8px;
+            margin-right: 8px;
+            width: 2px;
+            height: 30px;
+            background-color: black;
+  
+        }
+      
+    }
+    &__add-to-favorites {
+        align-self: center;
+        height: 24px;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+
+    &__navigaton-link {
+        box-sizing: border-box;
+        font-family: Poppins, sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.32px;
+        line-height: 24px;
+        font-weight: 500;
+        padding: 16px 32px;
+        flex-shrink: 0;
+        text-decoration: none;
+        border: 3px solid white;
+        border-radius: 40px;
+        color: black;
+        transition: all 300ms linear;
+        &:hover {
+            border-color: #FDA128;
+            
+        }
+        &.active {
+            background-color: #FDA128;
+            border-color: #FDA128;
+        }   
+    }  
+ 
+}
+.menu__change-language:first-child {
+    background-color: red;
+    border: 1px solid black;
+    width: 100px;
+}
+
+

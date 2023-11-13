@@ -1,0 +1,247 @@
+@mixin form-font-property {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.25px;
+}
+.form-page {
+    background-image: url('./assets/enter-page-background.png');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-position: center;
+    padding: 32px 0 44px;
+
+}
+.form-page__container {
+    margin: 0 auto;
+    max-width: 1168px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+}
+
+.form-enter {
+    grid-column-start: 8;
+    grid-column-end: 13;
+    padding: 16px 16px;
+    border-radius: 24px;
+    background: rgba(253, 161, 40, 0.70);
+    &__header {
+        text-align: center;
+    }
+    &__information{
+        @include  form-font-property;
+        margin-bottom: 32px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 32px 52px;
+        border-radius: 32px;
+        border: 1px solid rgba(179, 179, 179, 0.00);
+        background: url('./assets/opactiy.png') ,radial-gradient(122.09% 190.69% at -7.74% -7.03%, rgba(226, 227, 232, 0.50) 0%, rgba(190, 247, 255, 0.00) 100%);
+        background-blend-mode: overlay, normal;
+        box-shadow: 0px 12px 15px 0px rgba(68, 45, 134, 0.25);
+        backdrop-filter: blur(21.5px);
+    }
+    &__actions{
+        display: flex;
+        gap: 8px;
+        margin-bottom: 66px;
+    }
+    &__label-item {
+        @include form-font-property;
+    }
+    &__select-type-input{
+        position: relative;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        flex-grow: 1;
+        text-align: center;
+        color: #a08e8c;
+        cursor: pointer;
+        &::after{
+            position: absolute;
+            content: "";
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            background-color: #A08E8C;
+            height: 4px;
+            border-radius: 4px;
+        }
+        &.active{
+            color: #2e2c29;
+            &::after{
+            background-color: black;
+            }
+        }
+    }
+    &__label{
+        display: flex;
+        flex-direction: column;
+    }
+   /////////
+    &__form-entering-field {
+        font-size: 16px;
+        border: 3px solid #fcfcfc;
+        padding: 15px 24px;
+        border-radius: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; 
+        letter-spacing: 0.75px;
+        margin-top: 15px;
+       
+        &:focus{
+            border: 3px solid #ff8e3c;
+        }
+      
+    }
+    &__actions-with-password{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 28px;
+    }
+    &__remember-password {
+        display: none;
+    }
+    &__label-remember-password {
+        position: relative;
+        outline: none;
+        padding-left: 40px;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0%;
+            top: -25%;
+            width: 34px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+           
+        }
+        &.active::before{
+             background-image: url("./assets/checked.svg");
+             background-position: center;
+        }
+    }
+    &__forgot-password{
+        color: #2e2c29;
+    }
+    &__wrapper-open-authorised {
+        margin-bottom: 24px;
+    }
+    &__open-autorised-user {
+        width: 100%;
+        padding: 18px 40px;
+        border-radius: 40px;
+        font-size: 20px;
+        color: #f7f7fa;
+        background-color: #ff8e3c;
+        font-weight: 600;
+        line-height: 28px; 
+        letter-spacing: 0.75px;
+        transition: background-color 0.3s;    
+        &:hover {
+            background-color: #db4a51;
+        }
+        &:active{
+            color: #2e2c29;
+            background-color: #f7f7fa;
+        }
+    }
+    &__slogan-to-use-help {
+        margin-bottom: 24px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0.25px;
+    }
+    &__authorisation-by-goog-fac {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+    &__facebook, &__google {
+        gap: 8px;
+        flex-basis: 100px;
+        flex-grow: 1;
+        cursor: pointer;
+        display: flex;
+        padding: 8px 0px;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #ff8e3c;
+        border-radius: 40px;
+        color: #ff8e3c;
+        transition: border-color , color, 0.3s;
+        &:hover{
+
+            border-color: #db4a51;
+            color:#db4a51
+        }
+        &:active {
+            background-color: #fff;
+        }
+    }
+  
+   
+    &__logo-facebook, &__logo-google {
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s;
+    }
+    &__logo-facebook {
+        background-image: url('./assets/facebook.png');
+    }
+    &__facebook:hover &__logo-facebook {
+        background-image: url('./assets/face-hover.png');
+    }
+    &__face-book:active &__logo-facebook {
+        background-image: url('./assets/face-hover.png');
+    }
+    &__logo-google {
+        background-image: url('./assets/Vector.png');
+    }
+    &__google:hover &__logo-google{
+        background-image: url('./assets/google-hover.png');
+    }
+    &__google:active &__logo-google{
+        background-image: url('./assets/google-hover.png');
+    }
+    &__devider {
+        height: 4px;
+        background-color: #a0a3bd;
+        margin-bottom: 24px;
+    }
+    &__propose-to-registration {
+        text-align: center;
+        color:#2E2C29;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; 
+        letter-spacing: 0.25px;
+    }
+    &__propose-to-registration-action {
+        text-decoration-line:underline;
+        color:#2E2C29
+    }
+}
+
+.form-enter__label:first-child{
+    margin-bottom: 16px;
+}
+.form-enter__label:last-child{
+    margin-bottom: 24px;
+}
