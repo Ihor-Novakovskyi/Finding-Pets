@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./navigation.scss";
-import eng from "./circle-flags_eng.png";
-import ukr from "./circle-flags_ua.png";
-import logo from "./Logo.png";
-import heart from "./Heart.png";
-import search from "./Search.png"
+import eng from "./assets/circle-flags_eng.png";
+import ukr from "./assets/circle-flags_ua.png";
+import logo from "./assets/Logo.png";
+import heart from "./assets/Heart.png";
 export default function Navigation() {
     const clazzActive = 'active';
     let [dataAtrActiveElem, setDataAtrActiveElem] = useState('');
